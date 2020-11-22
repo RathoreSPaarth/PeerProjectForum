@@ -1,0 +1,47 @@
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" id="reg-form" method="POST" action="/postOrSearch">
+
+      <input type="text" required placeholder="Username" id="username" name="username" />
+      <input type="email" required placeholder="Email Address" id="email" name="email" />
+      <input type="password" required placeholder="Password" id="password" name="password" />
+      <input type="password" required placeholder="Confirm Password" id="confirm-password" name="confirmPassword" />
+
+      <button type="submit">Create</button>
+      <p class="message">Already have an Account? <a href="/login">Sign In</a></p>
+    </form>
+  </div>
+</div>
+
+<script defer>
+  let email = document.getElementById('email')
+  let password = document.getElementById('password')
+  let confirmPassword = document.getElementById('confirm-password')
+  let form = document.getElementById('reg-form')
+  let username = document.getElementById('username')
+
+  form.addEventListener('submit', (e) => {
+    let errorMsg = [];
+
+    if (username.value.length < 3 || username.value == "") {
+      let x = "Username should consist of atleast 3 characters";
+      errorMsg.push(x)
+    }
+
+    if (password.value !== confirmPassword.value) {
+      let x = "Password and Confirm Password are not same. Please try again"
+      errorMsg.push(x)
+    }
+    if (password.value.length < 8) {
+      let x = "Password must contain 8 characters"
+      errorMsg.push(x)
+    }
+
+    if (errorMsg.length > 0) {
+      e.preventDefault()
+      let err = errorMsg.join('\n')
+      alert(err)
+
+    }
+  })
+</script>

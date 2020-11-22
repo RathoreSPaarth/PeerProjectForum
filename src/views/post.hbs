@@ -1,0 +1,57 @@
+<form style="font-family:serif" method="POST" action="post-project">
+  <fieldset class="fieldse" style="text-align: center">
+    <legend>Fill the Project Details</legend>
+
+    <label>Student Name</label><br>
+    <input type="text" name="name"><br>
+
+    <br>
+
+    <label>Enter your email</label><br>
+    <input type="email" name="email"><br>
+
+    <br><label>What's your gender?</label><br>
+    <br>
+    <input type="radio" id="gender" name="gender" value="male" />Male
+    <input type="radio" id="gender" name="gender" value="female" />Female
+    <input type="radio" id="gender" name="gender" value="others" />Not willing to specify <br />
+
+    <br><label>Skills Level</label><br>
+    <br>
+    <input type="radio" id="skilllevel" name="skillLevel" value="Begineer" />Begineer
+    <input type="radio" id="skilllevel" name="skillLevel" value="Intermediate" />Intermediate
+    <input type="radio" id="skilllevel" name="skillLevel" value="Professional" />Professional <br />
+
+    <br>
+
+    <label for="domain">Choose a domain:</label>
+    <select name="domain" id="domain">
+      <option value="Web Development">Web Development</option>
+      <option value="Android app dev">Android App Development</option>
+      <option value="BlockChain">BlockChain</option>
+      <option value="Cyber Security">Cyber Security</option>
+      <option value="IOT">IOT</option>
+      <option value="Data Analytics">Data Analytics</option>
+      <option value="Data Science">Data Science</option>
+      <option value="Machine Learning">Machine Learning</option>
+      <option value="AR/VR">AR/VR</option>
+      <option value="Game Development">Game Developmet</option>
+    </select>
+
+    <br>
+    <br>
+    <label>Project Title</label><br>
+
+    <input type="text" name="projectTitle"><br>
+
+    <br>Project Description:<br>
+    <input type="text" placeholder="Describe your project in 2 lines" name="description"><br>
+
+    <br>
+
+    <button type="submit">Post a Project</button>
+
+    <br>
+
+  </fieldset>
+</form>
